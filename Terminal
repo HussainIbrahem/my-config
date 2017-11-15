@@ -1,6 +1,11 @@
-#Terminolgy
-#shell : fish
-#analog clock :clockywock
+# Terminolgy
+# shell : fish
+# analog clock :clockywock
 # i3 status :bumblebee-status
 # Fix keyboard layout Manjaro : setxkbmap -option grp:ctrl_shift_toggle us,ara
 # grammarly
+## Fix Arabic language :- But in .bashrc -:
+# hack to launch bicon if not launched
+if ! [[ "$(ps -p $(ps -p $(echo $$) -o ppid=) -o comm=)" =~ 'bicon'* ]]; then
+  bicon.bin
+fi
